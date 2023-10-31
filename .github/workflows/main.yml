@@ -35,3 +35,10 @@ jobs:
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: aci-sampleapp
             location: 'west us'
+        - name: Deploy Container App
+          uses: azure/container-apps-deploy-action@v1
+          with:
+           appSourcePath: ${{ github.workspace }}/src
+           acrName: testacrcontainerapp
+           containerAppName: testapp
+           resourceGroup: test-rg
