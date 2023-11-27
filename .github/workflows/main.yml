@@ -3,7 +3,7 @@ name:  Deploy into Azure Container App
 
 jobs:
     build-and-deploy:
-        runs-on: self-hosted
+        runs-on: [self-hosted, linux, x64]
         steps:
         # checkout the repo
         - name: 'Checkout GitHub Action'
