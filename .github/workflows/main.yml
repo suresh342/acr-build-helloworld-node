@@ -1,4 +1,3 @@
----
 name: Deploy into Azure Container App
 on:
   push:
