@@ -4,6 +4,8 @@ name:  Deploy into Azure Container App
 jobs:
     build-and-deploy:
         runs-on: self-hosted
+        env:
+         ACTIONS_RUNNER_DEBUG: true
         steps:
         # checkout the repo
         - name: 'Checkout GitHub Action'
