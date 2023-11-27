@@ -1,10 +1,17 @@
-on: [push]
+
 name:  Deploy into Azure Container App
 
+on:
+  push:
+    branches:
+      - master
+
 jobs:
-    build-and-deploy:
-        runs-on: [self-hosted, linux, x64]
-        steps:
+  build:
+    runs-on: self-hosted
+
+
+    steps:
         # checkout the repo
         - name: 'Checkout GitHub Action'
           uses: actions/checkout@development
